@@ -15,6 +15,7 @@ public class Shooting : MonoBehaviour {
 
     [Header("Ammo")]
     public int currentAmmo = 30;
+    public bool isAuto = false;
 
     bool isReloading = false;
     AudioSource gunShot;
