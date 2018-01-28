@@ -15,9 +15,8 @@ public class Shooting : MonoBehaviour {
 
     [Header("Ammo")]
     public int currentAmmo = 30;
-    public bool isAuto = false;
 
-    bool isReloading = false;
+    public bool isReloading = false;
     AudioSource gunShot;
 
     void Start()
@@ -30,12 +29,12 @@ public class Shooting : MonoBehaviour {
 
         ammo.text = currentAmmo.ToString();
 
-        if(currentAmmo <= 0)
+        if (Input.GetKeyDown(KeyCode.R))
         {
-            Reload();
+            currentAmmo = 0;
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
+        if (currentAmmo <= 0)
         {
             Reload();
         }
